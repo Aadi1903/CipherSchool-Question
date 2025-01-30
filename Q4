@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Eligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        
+        System.out.print("Enter your monthly income: ");
+        double income = sc.nextDouble();
+        
+        System.out.print("Do you have pending dues (true/false): ");
+        boolean Dues = sc.nextBoolean();
+        
+        String eligibility = (age >= 18 && income >= 30000 && !Dues) 
+                            ? "You are eligible for premium membership." 
+                            : "You are not eligible for premium membership.";
+        
+        System.out.println("\n" + eligibility);
+    }
+}
